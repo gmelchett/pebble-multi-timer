@@ -1,0 +1,411 @@
+{
+  "version": "4.1",
+  "author": "Pete Stoppani Consulting LLC",
+  "private": true,
+  "dependencies": {},
+  "keywords": [
+    "pebble-app"
+  ],
+  "pebble": {
+    "sdkVersion": "3",
+    "resources": {
+      "media": [
+        {
+          "menuIcon": true,
+          "type": "png",
+          "name": "IMAGE_MENU_ICON",
+          "file": "images/menu_icon.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_APPLE",
+          "file": "images/apple.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_RASPBERRY",
+          "file": "images/raspberry.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_PRISONER",
+          "file": "images/prisoner.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_COFFEEBEAN",
+          "file": "images/coffee_bean.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_LAPAVONI",
+          "file": "images/lapavoni.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_CHEMIST",
+          "file": "images/chemist.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_TRASH",
+          "file": "images/trash.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_PAUSE",
+          "file": "images/pause.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_RESET",
+          "file": "images/reset.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_SETUP",
+          "file": "images/setup.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_RUNNING",
+          "file": "images/running.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_STOPPED",
+          "file": "images/stopped.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_START",
+          "file": "images/start.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_BODOM",
+          "file": "images/bodom.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_CAP",
+          "file": "images/cappuccino.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_ESPRESSO_S",
+          "file": "images/espresso_s.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_AIRPLANE",
+          "file": "images/airplane.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_AMBULANCE",
+          "file": "images/ambulance.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_ANGER",
+          "file": "images/anger.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_BRAIN",
+          "file": "images/brain.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_BREAD",
+          "file": "images/bread.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_BUS",
+          "file": "images/bus.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_BUSINESS",
+          "file": "images/business.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_CALCULATOR",
+          "file": "images/calculator.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_CALENDAR",
+          "file": "images/calendar.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_CAT",
+          "file": "images/cat.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_CLOCK",
+          "file": "images/clock.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_DANGER",
+          "file": "images/danger.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_DOCTOR",
+          "file": "images/doctor.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_DOG",
+          "file": "images/dog.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_FIRE",
+          "file": "images/fire.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_FOOD",
+          "file": "images/food.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_HOLIDAY",
+          "file": "images/holiday.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_LAUNDRY",
+          "file": "images/laundry.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_LAUNDRY2",
+          "file": "images/laundry2.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_LOVE",
+          "file": "images/love.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_MUSIC",
+          "file": "images/music.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_PEOPLE",
+          "file": "images/people.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_PHONE",
+          "file": "images/phone.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_PHONE2",
+          "file": "images/phone2.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_PILL",
+          "file": "images/pill.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_SLEEP",
+          "file": "images/sleep.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_SMILE",
+          "file": "images/smile.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_STOPWATCH",
+          "file": "images/stopwatch.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_STOVE",
+          "file": "images/stove.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_SURPRISE",
+          "file": "images/surprise.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_TAXI",
+          "file": "images/taxi.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_TOAST",
+          "file": "images/toast.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_TRAIN",
+          "file": "images/train.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_VIBRATION",
+          "file": "images/vibration.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_WALK",
+          "file": "images/walk.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_WINE",
+          "file": "images/wine.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_TEA",
+          "file": "images/tea.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_EGG",
+          "file": "images/egg.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_STAR",
+          "file": "images/star.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_BURGER",
+          "file": "images/burger.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_FISH",
+          "file": "images/fish.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_MEAT",
+          "file": "images/meat.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_POTATO",
+          "file": "images/potato.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_VEGGIES",
+          "file": "images/veggies.png"
+        },
+        {
+          "menuIcon": false,
+          "type": "png",
+          "name": "IMAGE_BLANK",
+          "file": "images/blank.png"
+        }
+      ]
+    },
+    "projectType": "native",
+    "uuid": "6fdb0653-5d96-45ff-bc23-88141140686f",
+    "messageKeys": {
+      "KEY_COMMAND": 200,
+      "KEY_TIMELINE_TITLE": 203,
+      "KEY_TIMELINE_ID": 201,
+      "KEY_TIMELINE_TIME": 202,
+      "dummy": 1000
+    },
+    "enableMultiJS": false,
+    "displayName": "Multi-Timer+",
+    "watchapp": {
+      "onlyShownOnCommunication": false,
+      "hiddenApp": false,
+      "watchface": false
+    },
+    "targetPlatforms": [
+      "basalt",
+      "chalk",
+      "diorite"
+    ],
+    "capabilities": []
+  },
+  "name": "Multi-Timer+"
+}
