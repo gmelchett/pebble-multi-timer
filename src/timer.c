@@ -686,7 +686,7 @@ static void timer_update_time(void)
                 layer_set_hidden((Layer *)days_label_text_layer, true);
             }
 
-            if (hours > 0)
+            if (hours > 0 || days > 0)
             {
                 snprintf(hours_title, sizeof(hours_title), "%d", hours);
                 layer_set_hidden((Layer *)hours_text_layer, false);
