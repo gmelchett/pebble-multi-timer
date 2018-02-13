@@ -476,7 +476,7 @@ static void delete_window_load(Window *window) {
     text_layer_set_text_alignment(delete_text_layer, GTextAlignmentCenter);
     text_layer_set_overflow_mode(delete_text_layer, GTextOverflowModeWordWrap);
     
-    static char title[] = "Delete\ndd hh:mm:ss?";
+    static char title[48];
     uint32_t time = timers[cur_timer].total_sec - timers[cur_timer].elapsed_sec;
     int days = time / 60 / 60 / 24;
     int hours = time / 60 / 60 - days * 24;
@@ -619,7 +619,7 @@ static void vibe(int timer)
         case 3:
         {
             // Vibe pattern: {on, off, on, ...}
-            static const uint32_t const segments[] = { 200, 100, 400 };
+            static const uint32_t segments[] = { 200, 100, 400 };
             VibePattern pat = {
                 .durations = segments,
                 .num_segments = ARRAY_LENGTH(segments),
@@ -636,7 +636,7 @@ static void vibe(int timer)
 static void timer_update_time()
 {
     static char days_title[] = "ddddddd d";
-    static char hours_title[] = "dd h";
+    static char hours_title[10];
     static char time_title[] = "mm:ss";
     int alert_timer = -1;
     
@@ -1054,7 +1054,7 @@ static int16_t setup_menu_get_cell_height(MenuLayer *menu_layer, MenuIndex *cell
 
 static void setup_menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuIndex *cell_index, void *data)
 {
-    static char title[] = "ddddhh:mm:ss";
+    static char title[36];
     
     if (timers[cur_timer].isCountingUp)
     {
