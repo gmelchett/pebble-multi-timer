@@ -688,7 +688,7 @@ static void timer_update_time(void)
 
             if (hours > 0 || days > 0)
             {
-                snprintf(hours_title, sizeof(hours_title), "%d", hours);
+                snprintf(hours_title, sizeof(hours_title), "%02d", hours);
                 layer_set_hidden((Layer *)hours_text_layer, false);
                 layer_set_hidden((Layer *)hours_label_text_layer, false);
                 text_layer_set_text(hours_text_layer, hours_title);
@@ -699,7 +699,7 @@ static void timer_update_time(void)
                 layer_set_hidden((Layer *)hours_label_text_layer, true);
             }
 
-            snprintf(time_title, sizeof(time_title), "%d:%02d", minutes, seconds);
+            snprintf(time_title, sizeof(time_title), "%02d:%02d", minutes, seconds);
 
             text_layer_set_text(time_text_layer, time_title);
         }
