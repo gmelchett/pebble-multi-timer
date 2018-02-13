@@ -764,10 +764,11 @@ static void timer_handle_tick(struct tm* tick_time, TimeUnits units_changed)
 #define NUM_WIN_MODE_DONE       4
 
 static int number_window_value[] = { 0, 0, 0, 0 };
-static int number_window_max_value[] = { 999, 23, 59, 59 };
+static int number_window_max_value[] = { 1000, 24, 60, 60 };
 static char *number_window_labels[] = { "Set Days", "Set Hours", "Set Minutes", "Set Seconds" };
 static NumberWindow *number_window[NUM_WIN_MODE_DONE];
 
+static void number_window_build(int mode);
 static void number_window_selected(NumberWindow *this_window, void *context)
 {
     int mode = (int)context;
@@ -790,12 +791,36 @@ static void number_window_selected(NumberWindow *this_window, void *context)
     }
     else
     {
-        number_window[mode] = number_window_create(number_window_labels[mode], (NumberWindowCallbacks) { .selected = number_window_selected }, (void *)mode);
-        number_window_set_value(number_window[mode], number_window_value[mode]);
-        number_window_set_min(number_window[mode], 0);
-        number_window_set_max(number_window[mode], number_window_max_value[mode]);
-        window_stack_push((Window *)number_window[mode], true);
+        number_window_build(mode);
     }
+}
+
+static void number_window_decremented(NumberWindow *this_window, void *context)
+{
+    int mode = (int)context;
+
+    if (number_window_get_value(this_window) == -1) {
+	    number_window_set_value(this_window, number_window_max_value[mode]-1);
+    }
+}
+
+static void number_window_incremented(NumberWindow *this_window, void *context)
+{
+    int mode = (int)context;
+
+    if (number_window_get_value(this_window) == number_window_max_value[mode]) {
+	    number_window_set_value(this_window, 0);
+    }
+}
+
+static void number_window_build(int mode)
+{
+    number_window[mode] = number_window_create(number_window_labels[mode], (NumberWindowCallbacks) { .incremented = number_window_incremented, .decremented = number_window_decremented, .selected = number_window_selected }, (void *)mode);
+    number_window_set_value(number_window[mode], number_window_value[mode]);
+    number_window_set_min(number_window[mode], -1);
+    number_window_set_max(number_window[mode], number_window_max_value[mode]);
+
+    window_stack_push((Window *)number_window[mode], true);
 }
 
 static void number_window_init(void)
@@ -808,13 +833,8 @@ static void number_window_init(void)
     int hours = number_window_value[NUM_WIN_MODE_HOURS] = time / 60 / 60 - days * 24;
     int minutes = number_window_value[NUM_WIN_MODE_MINUTES] = time / 60 - days * 24 * 60 - hours * 60;
     number_window_value[NUM_WIN_MODE_SECONDS] = time - days * 24 * 60 * 60 - hours * 60 * 60 - minutes * 60;
-    int mode = NUM_WIN_MODE_DAYS;
-    number_window[mode] = number_window_create(number_window_labels[mode], (NumberWindowCallbacks) { .selected = number_window_selected }, (void *)mode);
-    number_window_set_value(number_window[mode], number_window_value[mode]);
-    number_window_set_min(number_window[mode], 0);
-    number_window_set_max(number_window[mode], number_window_max_value[mode]);
 
-    window_stack_push((Window *)number_window[mode], true);
+    number_window_build(NUM_WIN_MODE_DAYS);
 }
 
 static void number_window_init_timer_callback(void *data)
