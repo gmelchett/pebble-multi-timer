@@ -648,7 +648,7 @@ static void timer_update_time(void)
 {
     static char days_title[] = "ddddddd d";
     static char hours_title[10];
-    static char time_title[] = "mm:ss";
+    static char time_title[20];
     int alert_timer = -1;
 
     for (int i = 0; i < MAX_TIMERS; i++)
@@ -1627,7 +1627,7 @@ static void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuI
 #endif
     GRect layer_frame = layer_get_frame((Layer*) cell_layer);
     GSize layer_size = layer_frame.size;
-    char title[] = "ddd:hh:mm:ss+stopwatch";
+    char title[30];
 
     switch (cell_index->section) {
         case SECTION_TIMERS:
